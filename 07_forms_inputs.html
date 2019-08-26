@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Forms & Inputs</title>
 </head>
+
 <body>
-    <!-- Form 
-        action - where forms data going to be submitted
-    -->
-    <form action="process.php">
-        <div>
-            <label for="name">Insert Name</label>
-            <input id="name"  type="text" value="">
-        </div>
-    </form>
+    <!-- VScode shortcut 
+        "ctrl + d" - multiple the marker, selects and marks the same selected phrase
     
+    -->
+
+    <!-- 
+        EMMET SHORTCUT:
+        "input:button + tab" = <input type="button" name="" id="">
+     -->
+
+    <!-- Form 
+            action - where forms data going to be submitted
+        -->
+    <form action="process.php">
+        <!-- Text input -->
+        <div>
+            <label for="name">Insert Name</label><br>
+            <input id="name" type="text" name="name" value="John Doe"> <!-- name attribute value is sent to the server -->
+        </div>
+        <!-- Email input -->
+        <div>
+            <label for="email">Insert Email</label><br>
+            <input id="email" type="email" name="name" placeholder="Enter EMAIL">
+        </div>
+        <!-- Textarea -->
+        <div>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" cols="50" rows="5"></textarea>
+        </div>
+        <!-- Option -->
+        <div>
+            <label for="sex">Choose Gender</label><br>
+            <select id="sex" name="sex">
+                <option value="1" selected>Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
+            </select>
+        </div>
+        <!-- Number input -->
+        <div>
+            <label for="number">Age</label><br>
+            <input type="number" name="number" id="number">
+        </div>
+        <!-- Date input -->
+        <div>
+            <label for="birthdate">Birthdate</label><br>
+            <input type="date" name="birthdate" id="birthdate">
+        </div>
+        <!-- Radio input -->
+        <div>
+            <label for="radio">Member Ship:</label><br>
+            <input checked type="radio" name="membership" id="membership" value="simple">Free
+            <input type="radio" name="membership" id="membership" value="membership">Premium
+        </div>
+        <!-- Checkbob input  -->
+        <div>
+            <label for="likes">likes...</label><br>    
+            <input type="checkbox" name="likes" id="likes" value="Jiu jitsh">Jiu jitsh
+            <input type="checkbox" name="likes" id="likes" value="Motorcycles">Motorcycles
+        </div>
+
+        <!-- Button inputs -->
+
+        <input type="button" value="Submit">
+        <!-- Ussing button tag -->
+        <button type="submit">Submit</button>
+        <!------------------------ reset button -------------->
+        <button type="reset">Reset</button>
+
+    </form>
+
 </body>
+
 </html>
