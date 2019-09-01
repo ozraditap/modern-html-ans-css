@@ -3,8 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Box Model, Margin & Padding</title>
+    <style>
+        /* VS code shortcut - ctrl+m - to disabale tab ident */
+        
+        /* ***** Same CSS propreties the ones that are further down will overwrite the ones on the top */
+        
+        /* CSS Reset - * selects all the elements */
+        /* 
+           Padding - inside the border, adds to thewidth of the element
+           Margin - outside the border
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background: #f4f4f4;
+            border: 2px #777 solid;
+            width: 500px;
+
+            /* Padding on all sides */
+            padding: 20px; /* adds to the width */
+            box-sizing: border-box; /* The proprety keeps the width as we defined including the padding */
+            
+            /* Padding per side */
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-left: 20px;
+
+            /* Padding shorthand = top, right, bottom, left */
+            padding: 10px, 20px, 10px, 20px;
+            /* Padding shorthand = top/buttom, left/right */
+            padding: 10px, 20px;
+
+            
+            /* Margin on all sides, same as padding */
+            margin: 20px;
+        }
+
+        .box h3 {
+            padding-bottom: 10px;
+        }
+
+        
+    </style>
 </head>
 <body>
+    <div class="box">
+        <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis nostrum debitis modi similique cumque maiores vitae placeat cupiditate accusantium reiciendis?
+                Placeat fugiat similique quos illo provident consequuntur repudiandae neque quae?
+            </p>
+    </div>
+    <div class="box">
+        <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis nostrum debitis modi similique cumque maiores vitae placeat cupiditate accusantium reiciendis?
+                Placeat fugiat similique quos illo provident consequuntur repudiandae neque quae?
+            </p>
+    </div>
     
 </body>
 </html>
