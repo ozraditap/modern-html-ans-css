@@ -4,18 +4,58 @@
     <title>Display Block, Inline & Inline block</title>
     <style>
         li {
+            /* Set block element to Inline */
             display: inline ;
         }
         li a {
             padding-right: 10px;
         }
+        img {
+            /* We cant do margin auto on inline element */
+            display: block;
+            margin: auto;
+        }
+        /* You cant use width,margin... on Inline elements so we will use inline-block */
+        .box {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 32%;
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
     <ul>
+        <!-- By default list items are block elements -->
         <li><a href="#">Technology</a></li>
         <li><a href="#">Business</a></li>
         <li><a href="#">Fashion</a></li>
     </ul>
+    <br><br>
+
+        <!-- img by default is an inline element -->
+    <img src="./img/Leaf.png" alt="My Image">
+    <br><br>
+
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Vitae assumenda dolores quo repudiandae quos harum provident asperiores quia, quas pariatur voluptatibus iusto 
+            maxime nam error voluptatum libero similique facere. Dignissimos.</p>
+    </div>
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Vitae assumenda dolores quo repudiandae quos harum provident asperiores quia, quas pariatur voluptatibus iusto 
+            maxime nam error voluptatum libero similique facere. Dignissimos.</p>
+    </div>
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Vitae assumenda dolores quo repudiandae quos harum provident asperiores quia, quas pariatur voluptatibus iusto 
+            maxime nam error voluptatum libero similique facere. Dignissimos.</p>
+    </div>
 </body>
 </html>
