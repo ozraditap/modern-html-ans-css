@@ -86,8 +86,15 @@ html, body {
 .py-3 {
     padding: 30px 0;
 }
-
-
+.box {
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+.box i {
+    margin-bottom: 10px;
+}
  /* Navbar */
 #navbar {
     background:#333;
@@ -167,16 +174,8 @@ html, body {
 }
 
 /* Features */
-#features .box {
-    float: left;
-    width: 33.3%;
-    padding: 50px;
-    text-align: center;
-}
 
-#features .box i {
-    margin-bottom: 10px;
-}
+
 
 /* About Info */
 #about-info .info-right {
@@ -245,6 +244,7 @@ html, body {
     outline: none;
     border-color: #f7c08a;
 }
+
 /* Footer */
 #main-footer {
     text-align: center;
