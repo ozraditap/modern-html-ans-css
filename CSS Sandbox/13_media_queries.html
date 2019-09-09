@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- @media devides to three media types:
+        1) screen
+        2) print
+        3) speech
+
+        * the default of only @media is all
+        SOmetimes we will see:
+        @media only screen and (max-width: 500px) {...}
+    
+
+        **----- External CSS and media attribute -----** :
+        <link rel="stylesheet" media="screen and (max-width: 500px )" href="mobile.css">
+
+        * it will l;oad the style sheet only if the screen size is
+          500px or less
+        * must be under the main style sheet
+    -->
+    <meta charset="UTF-8">
+    <!-- Viewport is mendatory for media query to work -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media queries</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: gray;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+h1 {
+    display: none;
+}
+/* Smartphones
+    * Smartphones width is usually under 500px brakepoint
+*/
+@media (max-width: 500px) {
+    body {
+        background: red;
+    }
+    #smartphone h1 {
+        display: block;
+    }
+}
+/* Tablet
+    * Tablet width is usually under 768px
+*/
+@media (min-width: 501px) and (max-width: 768px) {
+    body {
+        background: blue;
+    }
+    #tablet h1 {
+        display: block;
+    }
+}
+/* Normal
+    * Normal screen width is usually between 769px and 1200px
+*/
+@media (min-width: 769px) and (max-width: 1200px) {
+    body {
+        background: green;
+    }
+    #normal h1 {
+        display: block;
+    }
+}
+/* Widescreen
+    * Normal screen width is usually between 769px and 1200px
+*/
+@media (min-width: 1201px){
+    body {
+        background: black;
+    }
+    #widescreen h1 {
+        display: block;
+        color: white;
+    }
+}
+/* Landscape
+    * Normal screen width is usually between 769px and 1200px
+*/
+@media (max-height: 500px){
+    body {
+        background: orange;
+    }
+    #landscape h1 {
+        display: block;
+        color: white;
+    }
+}
+</style>
+<link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 500px)">
+</head>
+<body>
+   <div id="widescreen">
+       <h1>Widescreen</h1>
+   </div> 
+   <div id="normal">
+       <h1>Normal</h1>
+   </div> 
+   <div id="tablet">
+       <h1>Tablet</h1>
+   </div> 
+   <div id="smartphone">
+       <h1>Smartphone</h1>
+   </div> 
+   <div id="landscape">
+       <h1>Landscape</h1>
+   </div> 
+</body>
+</html>
