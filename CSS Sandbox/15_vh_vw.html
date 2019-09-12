@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vh & Vw Units</title>
+    <style>
+        /* 
+            Viewport - is the entire section of the browser
+                       which is basically the browser body.
+
+            vh - viewport hights, each vh is a slice/row of the viewport/browser display doesnt metters if the browser is bigger or smaller.
+                 There is max 100 vh and each one a slice.
+            vw - viewport widths, each vw is a slice/column of the viewport/body.
+                 There is max 100 vw and each one a slice.
+         */
+
+         * {
+             box-sizing: border-box;
+             padding: 0;
+             margin: 0;
+         }
+         body {
+             font-family: 'Courier New', Courier, monospace;
+         }
+         header {
+             background: #333 url("https://source.unsplash.com/user/erondu/1600x900") no-repeat center center/cover;  ;
+             color: #fff;
+             /* height: 100%; - wont span all over the browser display because the body
+             expends dinamically according to the content inside it, 
+             here enters the viewport */
+             height: 100vh;
+             text-align: center;
+             padding: 2rem;
+             padding-top: 15rem;
+         }
+         header h1 {
+             font-size: 3rem; /* 16*3 = 48px computed */
+         }
+         header p {
+             margin: 1rem 0;
+         }
+         .btn {
+             display: inline-block;
+             background: #333;
+             color: #f4f4f4;
+             text-decoration: none;
+             border: 3px solid black;
+             padding: 0.75rem 2rem;
+             border-radius: 10px;
+         }
+         section {
+             padding: 2rem;
+         }
+
+         @media(max-height: 450px) {
+             /* This styling kicks in when height lower than 450px */
+             header {
+                 padding-top: 5rem;
+             }
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our website</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+           Saepe, unde dolores iure culpa necessitatibus atque!
+        </p>
+        <a href="#" class="btn">Find Out More</a>
+    </header>
+    <section>
+        <h3>About Our Company</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Odio tempore sed dolorum aperiam, cumque praesentium est
+            itaque blanditiis illum ratione voluptate aliquam ducimus,
+            quaerat minima ipsa minus, dolorem vitae aspernatur perferendis
+            culpa alias architecto rerum quis nam. Voluptates, officiis labore
+            eligendi totam, ex minima exercitationem, recusandae debitis ullam eos nihil.
+        </p>
+    </section>
+
+    
+</body>
+</html>

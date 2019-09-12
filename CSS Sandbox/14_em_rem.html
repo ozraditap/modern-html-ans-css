@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>em & rem size units</title>
+    <!-- 
+         1) em - multiplies the parent elements style size
+       * 2) rem - multiplies the html root elements style size
+        To change html root styling:
+        html {
+            font-size: 16px;
+        }
+        rem is a better choice then em.
+     -->
+</head>
+<style>
+    #box-1 {
+        font-size: 20px;
+    }
+    #box-1 p {
+        font-size: 1.5em;
+    }
+</style>
+<body>
+    <div id="box-1">
+        <h3>Box One</h3>
+        <p>
+            Lorem ipsum dolor
+             sit amet consectetur adipisicing elit. 
+             Numquam nemo ea necessitatibus ullam suscipit! Placeat 
+             asperiores modi soluta ducimus, quasi, quis reiciendis illum 
+             officiis rem itaque doloribus animi hic quibusdam.
+            </p>
+    </div>
+    <div id="box-2">
+        <h3>Box Two</h3>
+        <p>
+            Lorem ipsum dolor
+             sit amet consectetur adipisicing elit. 
+             Numquam nemo ea necessitatibus ullam suscipit! Placeat 
+             asperiores modi soluta ducimus, quasi, quis reiciendis illum 
+             officiis rem itaque doloribus animi hic quibusdam.
+            </p>
+    </div>
+</body>
+</html>
