@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex align</title>
+    <style>
+        #container {
+            background: #555;
+            display: flex;
+            /* flex-wrap removes the scroll */
+            /* flex-wrap: wrap; */
+
+            /* Align items horizontal */
+            /* flex items aligment - justify-content proprety */
+            justify-content: flex-start; /* align to the left*/
+            justify-content: flex-end; /* align to the right*/
+            justify-content: center; /* align to the center*/
+            justify-content: space-around; /* devides the space between the elements and edges*/
+            justify-content: space-between; /* devides the space between the elements*/
+            justify-content: space-evenly; /* devides the space between the elements and edges*/
+            
+            /* Align items vertical */
+            /* align-items proprety, container must have height value in order to use it */
+            height: 600px;
+            align-items: stretch;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            /* align-items: baseline; */
+
+            /* Align items vertical where extra space, usually where there is more than one line of items */
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;;
+            align-content: space-evenly;
+
+        }
+        .item {
+            /*If we want custom with for each item instead of flex: 1; we can use width: 300px; or flex-basis: 300px; */
+            /* flex: 1;  */
+            /* width: 300px;  */
+            flex-basis: 200px; 
+            background: #f4f4f4;
+            border: #ccc solid 1px;
+            padding: 1rem;
+            text-align: center;
+            margin: 0.5rem;
+        }
+        /* Set items order */
+        .item-1 {
+            order: 3;
+        }
+
+        /* Align single item vertical */
+        .item-2 {
+            align-self: flex-end;
+        }
+        .item-3 {
+            order: 1;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- EMMET trick:     .item.item-${<h3>item $</h3>}*3 -->
+        <div class="item item-1">
+            <h3>item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>item 3</h3>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
