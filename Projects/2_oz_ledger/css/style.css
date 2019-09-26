@@ -75,7 +75,7 @@ p {
     background: #fab436;
 }
 .btn-dark {
-    background: 333;
+    background: #333;
     color: #fff;
 }
 .list {
@@ -190,4 +190,13 @@ p {
 }
 #contact .contact-form label {
     display: block;
+}
+
+#contact .contact-form input,
+#contact .contact-form input {
+    width: 100%;
+    padding: 0.5rem;
+}
+#contact .map {
+    background: url("../img/map.png") no-repeat center center/cover;
 }
