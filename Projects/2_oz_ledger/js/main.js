@@ -1,3 +1,13 @@
+
+// Sticky menu backgroung
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 150) {
+        document.querySelector('#navbar').style.opacity = 0.9;
+    } else {
+        document.querySelector('#navbar').style.opacity = 1;
+    }
+});
+
 // Smooth Scrolling
 console.log('JS is connected')
 $('#navbar a, .btn').on('click', event => {
