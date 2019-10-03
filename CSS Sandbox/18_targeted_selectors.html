@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Targeted selectors</title>
+    <style>
+        /* > - each p that its direct parent is a div */
+        div > p {
+            background: #ddd;
+        }
+        /* Directly after - target the p that right after the div which is in the same level */
+        div + p {
+            background: #333;
+            color: #fff;
+        }
+        /* By attribute, all links with target attribute */
+        a[target] {
+            background: red;
+            color: white;
+        }
+        a[target="_blank"] {
+            background: blue;
+            color: white;
+        }
+        /* Specific attribute value */
+        input[type='text'],input[type='email'] {
+            width: 10%;
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li>item 1</li>
+            <li><p>item 2</p></li>
+            <li>item 3</li> 
+        </ul>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <a href="#">Page ONE</a>
+    <a href="#" target="_self">Page TWO</a>
+    <a href="http://WWW.GOOGLE.COM" target="_blank">Google</a>
+    <br>
+    <br>
+    <br>
+
+    <form action="">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" value="Sbmit">
+    </form>
+</body>
+</html>
