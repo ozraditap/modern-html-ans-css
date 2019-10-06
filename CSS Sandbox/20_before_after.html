@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Before and after pseudo selectors</title>
+    <!-- 
+        Before and after pseudo selectors allows us to insert content before and after an element.
+        The element gets inserted from the css and wont appear in the html inspect element
+     -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: #333;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+
+            /* background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover; */
+            /* When we add opacity the text also gets darker, inorder to fix it we will use before/after */
+            /* opacity: 0.4; */
+        }
+
+        header:before {
+            /* We must use content propety on before and after even if empty */
+            content: "";
+            background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+            opacity: 0.4;
+            /* We must position the image in order to see it */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 1rem;
+        }
+
+        .is_required:after {
+            content: '*';
+            color-adjust: red;
+            padding-left: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <label class="is_required" for="name">Name</label>
+    <input type="text" name="name" id="name">
+
+    <header>
+        <h1>Hi Oz</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur.
+            adipisicing elit. Omnis, incidunt.
+        </p>
+    </header>
+    <section>
+        <h3>Hi There</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Vero tempora ullam voluptas exercitationem illum hic atque iste doloremque ad excepturi!
+        </p>
+    </section>
+</body>
+
+</html>
