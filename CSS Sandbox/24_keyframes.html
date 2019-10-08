@@ -13,15 +13,39 @@
     }
     .box {
         background: white;
+        position: relative;
         width: 200px;
         height: 200px;
         margin: 0 auto;
         /* ANIMATION PROPRETIES */
         animation-name: animate1;
         animation-duration: 2s;
+        /* Repeat 3 times */
+        animation-iteration-count: 3;
+        /* At the end of the animation its width will stay 400px */
+        animation-fill-mode: forwards;
+        /* Animation will start after 2 sec */
+        animation-delay: 1s;
+        animation-direction: alternate;
+        /* Set the motion */
+        animation-timing-function: ease;
+
+        /* Or we can do it in one line */
+
+        animation: animate1 5s forwards 1s ease-in-out;
+
     }
     /* We must to use key frame in order ro activate the animations */
     @keyframes animate1 {
+        from {
+            width: 200px;
+            background: red;
+            top: 0
+        }
+        to {
+            width: 600px;
+            top: 500px;
+        }
 
     }
 </style>
