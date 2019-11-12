@@ -31,3 +31,31 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+h1 {
+    font-size: 2.5rem;
+}
+
+#timeline > ul {
+    background: var(--primary-color)
+}
+/* Create Line */
+#timeline > ul li {
+    list-style: none;
+    /* We will put the items inside absoulute */
+    position: relative;
+    /* Cretion of the line */
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #fff;
+}
+/* Boxes */
+#timeline > ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 1rem;
+    background: var(--secondary-color);
+    transition: all 0.5s ease-in-out;
+}
