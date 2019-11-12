@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #425b84;
+    --secondary-color: #5b7bb4;
+    --i-color: orange;
+    --max-width: 2200px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.fas{
+    color: var(--i-color);
+}
+body{
+    font: normal 1rem/1.7 'arial', sans-serif;
+    background: var(--primary-color);
+    color: #fff;
+    /* No horizontal scroll bars */
+    overflow-x: hidden; 
+    padding-bottom: 50px;
+}
+#main-header {
+    background: var(--secondary-color);
+    padding: 2rem;
+}
+#main-header > .container{
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
