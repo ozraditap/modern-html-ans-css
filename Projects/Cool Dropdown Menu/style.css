@@ -96,6 +96,7 @@ display: none;
 @media(max-width: 600px) {
     #navbar ul li {
         display: block;
+        margin:-8px -8px;
     }
     #navbar ul li:hover ul {
         width: 100%;
