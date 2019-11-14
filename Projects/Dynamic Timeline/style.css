@@ -58,14 +58,19 @@ h1 {
     padding: 1rem;
     background: var(--secondary-color);
     transition: all 0.5s ease-in-out;
+    visibility: hidden; 
+    opacity: 0;
 }
 /* Right side */
 #timeline > ul li:nth-child(odd) div {
     left: 40px;
+    transform: translate(200px, 0);
 }
 /* Left side */
 #timeline > ul li:nth-child(even) div {
     left: -434px;
+    transform: translate(-200px, 0);
+
 }
 /* Dots */
 #timeline > ul li:after{
@@ -75,7 +80,7 @@ h1 {
     bottom: 0;
     width: 25px;
     height: 25px;
-    background: var(--secondary-color);
+    background: inherit;
     transform: translateX(-50%);
     border-radius: 50%;
     transition: background 0.5s ease-in-out;
@@ -101,6 +106,17 @@ h1 {
     border-width: 8px 0 8px 16px;
     border-color: transparent transparent transparent var(--secondary-color);
 }
+/* Show boxes */
+#timeline ul li.show div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+#timeline ul li.show:after {
+    background: var(--secondary-color);
+}
+
+
 /* Media Query */
 @media(max-width: 900px) {
     #timeline ul li div {
