@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Columns</title>
+    <style>
+    /* Gris works similar fo flex meaning when we take parent element and we set display grid
+       which makes all the child element grid elements
+    */
+    .grid {
+        display: grid;
+        /* Here we spec how many columns and width we wants (3 columns of 200px) */
+        /* grid-template-columns: 200px 200px 200px ; */
+        /* grid-template-columns: 200px auto 200px ; */
+        /* grid-template-columns: auto auto auto ; */
+        /* grid-template-columns: reprat(3, auto); */
+
+        /* fr - fraction unit of grid, like flex:1... */
+        grid-template-columns: 1fr 2fr 1fr;
+        /* Adding margin between the columns  */
+        grid-gap: 1rem;
+    }
+    .item {
+        padding: 3rem;
+        border: 1px solid #ccc;
+        background: #f4f4f4;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1.5rem;
+    }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+    </div>
+    
+    <main>
+        <section>
+            <h3>Welcome to gallery site</h3>
+            <p>Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Vero, nemo.Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Vero, nemo.Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Vero, nemo.Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Vero, nemo.Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Vero, nemo.Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Vero, nemo. </p> 
+        </section>
+        <aside>
+            <h3>Hello</h3>
+            <p>Lorem ipsum dolor sit, amet
+               consectetur adipisicing elit. A, quidem!</p>
+        </aside>
+    </main>
+</body>
+</html>
