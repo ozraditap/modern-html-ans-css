@@ -1,6 +1,7 @@
     /* Justify self is used to align flex item for the parent we use justify-content and align items */
 /* !!!!!!!!!!!!!!!!!! By default images will stretch beyond its container !!!!!!!!!!!! */
 
+/* --------- Core ---------- */
 :root {
     --primary-color: #c72727;
     --secondary-color: #f99500;
@@ -31,7 +32,7 @@ ul {
     list-style: none;
 }
 
-/* !!!!!!!!!!!!!!!!!! By default images will stretch beyond its container !!!!!!!!!!!! */
+/* !!!!!! By default images will stretch beyond its container so we need to give it width or height proprety !!!!!!!!!!!! */
 img {
     width: 100%;
 }
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h6 {
     line-height: 1.3;
 }
 
-/* Utility */
+/* --------- Utility ---------- */
 
 .container {
     max-width: var(--max-width);
@@ -49,8 +50,41 @@ h1, h2, h3, h4, h6 {
     padding: 0 2rem;
     overflow: hidden;
 }
+.category {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+.category-sports { background: var(--sports-color); }
+.category-ent { background: var(--ent-color); }
+.category-tech { background: var(--tech-color); }
 
-/* Navigation */
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+}
+.btn-light {background: var(--light-color)}
+.btn-primary {background: var(--primary-color)}
+.btn-secondary {background: var(--secondary-color)}
+
+.btn-bloack { 
+    display:block; 
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ---------- Navigation --------- */
 
 #main-nav {
     background: #fff;
@@ -93,5 +127,40 @@ h1, h2, h3, h4, h6 {
 }
 #main-nav .social i {
     color: #777;
-    margin-right: 0.5rem;
+    margin-right: 0.5rem;    
 }
+
+/* ----------Showcase---------- */
+#showcase {
+    color: #fff;
+    background: var(--dark-color);
+    padding: 2rem;
+    /* position absolute (:before) is inside the first relative container */
+    position: relative;
+}
+#showcase::before {
+    content: '';
+    background: url('../img/featured.jpg') no-repeat center center/cover;
+    /* I position the image on top of the showcase */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+/* push the text over the image */
+#showcase .showcase-content{
+z-index: 1;
+}
+#showcase .showcase-content p {
+    margin-bottom: 1rem;
+}
+
