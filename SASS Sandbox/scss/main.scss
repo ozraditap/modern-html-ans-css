@@ -1,0 +1,12 @@
+// Package.json settings
+// Create a sass script - npm run sass
+// run node-sass (-w) watch on folder scss/ (-o) output to folder dist/css --recursive flag
+
+// 1) npm run sass
+// It will constantly watch on the scss folder at any sass file in it and as soon as we save it'll compile into dist css which we haven't even created
+
+// 2) dist is the only foder we deploy, the other folder is out dev env.
+$color: red;
+body {
+    background: $color;
+}
