@@ -9,6 +9,7 @@
 
 //-------------------------- Variables moved to _variables.scss partial, and this how we import it
 @import 'variables';
+@import 'functions';
 
 * {
     padding: 0;
@@ -26,7 +27,8 @@ body {
 //-------------------------------------------- Nesting & Structuring
 header{
     background: $dark-color;
-    color: $light-color;
+    // function "set-text-color" call
+    color: set-text-color($dark-color);
     padding: 1rem;
 
     // h1 is nested inside the header, the adventege is that its similar to the html
@@ -38,7 +40,7 @@ header{
 .section {
     margin: 0 auto;
     padding: 2rem;
-    max-width: 600px;
+    max-width: 650px;
 
     h3 {
         text-align: center;
@@ -47,11 +49,11 @@ header{
     // & refers to the perent (.section)
     &-a {
         background: $primary-color;
-        color: #fff;
+        color: set-text-color($primary-color);
     }
     &-b {
         background: $secondary-color;
-        color: #fff;
+        color: set-text-color($secondary-color);
     }
 }
 
@@ -84,18 +86,22 @@ header{
     &-light {
         @extend %btn-shared;
         background-color: $light-color;
-        color: #333;
+        color: set-text-color($light-color);
+        &:hover {
+            @include transform(rotate(-20deg));
+            background-color: darken($light-color, 10%);
+            color: coral;
         }
+    }
     &-dark {
         @extend %btn-shared;
         background-color: $dark-color;
-        color: #fff;
+        color: set-text-color($dark-color);
+        &:hover {
+            @include transform(rotate(-20deg));
+            color: coral;
+            background-color: lighten($dark-color, 10%);
         }
-
-    &-light:hover,
-    &-dark:hover {
-        color: coral;
-        opacity: 0.85;
     }
 }
     
