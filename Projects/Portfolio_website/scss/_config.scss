@@ -6,3 +6,12 @@ $medium-color: #ccc;
 $dark-color: #333;
 // When compiling the scss file it will be located the css file in dist/css folder so we will refer to that
 $bg-image: url("../img/showcase.jpg");
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
